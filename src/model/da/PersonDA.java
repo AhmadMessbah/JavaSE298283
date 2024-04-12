@@ -28,7 +28,7 @@ public class PersonDA {
     public boolean findByNationalId(String nationalId) throws Exception {
         Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:xe",
-                "javase",
+                "java",
                 "java123"
         );
         PreparedStatement preparedStatement = connection.prepareStatement(
