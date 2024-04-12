@@ -1,6 +1,4 @@
 package model.da;
-
-import model.entity.Person;
 import model.entity.Phone;
 
 import java.sql.*;
