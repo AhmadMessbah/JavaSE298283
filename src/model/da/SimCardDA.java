@@ -34,5 +34,4 @@ public class SimCardDA {
         preparedStatement.execute();
         disconnect();
     }
-
-
+}
