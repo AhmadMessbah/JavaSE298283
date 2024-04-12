@@ -11,12 +11,10 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @SuperBuilder
 
-public class House {
-    private int id;
-    private String address;
-    private int measure;
-    private int room;
-    private String region;
+public class FinancialDoc {
+    int id;
+    int amount;
+    String description;
 
     @Override
     public String toString() {

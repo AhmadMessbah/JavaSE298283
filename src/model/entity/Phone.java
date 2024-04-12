@@ -1,22 +1,26 @@
 package model.entity;
 
 import com.google.gson.Gson;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @SuperBuilder
 
-public class House {
+public class Phone {
     private int id;
-    private String address;
-    private int measure;
-    private int room;
-    private String region;
+    private String firstName;
+    private String lastName;
+    private String brand;
+    private String color;
+    private String serial;
+    private double price;
 
     @Override
     public String toString() {
