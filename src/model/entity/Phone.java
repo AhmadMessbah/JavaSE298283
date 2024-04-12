@@ -20,15 +20,6 @@ public class Phone {
     String serial;
     double price;
 
-    public Phone(int id, String firstName, String lastName, String brand, String color, String serial, double price) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.brand = brand;
-        this.color = color;
-        this.serial = serial;
-        this.price = price;
-    }
 
     @Override
     public String toString() {
