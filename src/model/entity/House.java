@@ -14,8 +14,8 @@ import lombok.experimental.SuperBuilder;
 public class House {
     private int id;
     private String address;
-    private String measure;
-    private String room;
+    private int measure;
+    private int room;
     private String region;
 
     @Override
