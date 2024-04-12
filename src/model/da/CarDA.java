@@ -6,7 +6,7 @@ public class CarDA {
     private Connection connection;
     private PreparedStatement preparedStatement;
     private void connect () throws SQLException{
-        connection=
+//        connection=
     }
 
 }
