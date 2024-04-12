@@ -1,8 +1,6 @@
 package model.da;
 
-import model.entity.Person;
 import model.entity.Trip;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.sql.ResultSet;
