@@ -35,16 +35,15 @@ public class TripDA {
         disconnect();
     }
 
-    public void edit(int id) throws Exception {
+    public void edit(Trip trip) throws Exception {
         connect();
         PreparedStatement preparedStatement = connection.prepareStatement(
                 "UPDATE TRIP SET DESTINATION = ?,DESCRIPTION = ?,TAGS = ? WHERE ID = ?"
         );
-        preparedStatement.setInt(4, id);
-        Trip trip = new Trip();
         preparedStatement.setString(1, trip.getDestination());
         preparedStatement.setString(2, trip.getDescription());
         preparedStatement.setString(3, trip.getTags());
+        preparedStatement.setInt(4, trip.getId());
         preparedStatement.execute();
         disconnect();
     }
