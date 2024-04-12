@@ -1,0 +1,1 @@
+This is JavaSE MVC sample
