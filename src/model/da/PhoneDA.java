@@ -72,8 +72,15 @@ public class PhoneDA {
         ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()) {
-            Phone phone = new Phone();
-
+            Phone phone = new Phone(resultSet.getInt("ID"), resultSet.getString("FIRST_NAME"),
+                    resultSet.getString("LAST_NAME"), resultSet.getString("BRAND"),
+                    resultSet.getString("COLOR"), resultSet.getString("SERIAL_NUMBER"),
+                    resultSet.getDouble("PRICE"));
+            phoneList.add(phone);
         }
+
+        disconnect();
+
+        return phoneList;
     }
 }
