@@ -10,17 +10,20 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @SuperBuilder
+public class Car {
+    private  int id;
+    private  String name;
+    private  String plateNumber;
+    private  String color;
 
-public class House {
-    private int id;
-    private String address;
-    private int measure;
-    private int room;
-    private String region;
 
     @Override
-    public String toString() {
+    public String toString(){
         Gson gson = new Gson();
-        return gson.toJson(this);
+
+        return  gson.toJson( this);
     }
+
+
+
 }

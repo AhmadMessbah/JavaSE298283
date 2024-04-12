@@ -7,8 +7,9 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-    @NoArgsConstructor
+@NoArgsConstructor
     @Getter
     @Setter
     @SuperBuilder
@@ -16,9 +17,9 @@ import java.time.LocalDate;
         private int id;
         private String name;
         private String classNo;
-        private String inpersonCode;
+        private String inPersonCode;
         private String onlineCode;
-        private LocalDate startDate;
+        private LocalDateTime startDateTime;
 
         @Override
         public String toString() {
