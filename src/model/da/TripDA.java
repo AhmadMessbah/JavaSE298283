@@ -25,7 +25,7 @@ public class TripDA {
     }
     public void save(Trip trip) throws Exception {
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "INSERT INTO TRIP(ID,DESTINATION,DESCRIPTION,TAGS) VALUES (TRIP_SEQ.NEXTVAL , ?,?,?)"
         );
         preparedStatement.setString(1, trip.getDestination());
@@ -37,7 +37,7 @@ public class TripDA {
 
     public void edit(Trip trip) throws Exception {
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "UPDATE TRIP SET DESTINATION = ?,DESCRIPTION = ?,TAGS = ? WHERE ID = ?"
         );
         preparedStatement.setString(1, trip.getDestination());
@@ -50,7 +50,7 @@ public class TripDA {
 
     public void remove(int id) throws Exception {
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "DELETE FROM TRIP WHERE ID=?"
         );
         preparedStatement.setInt(1, id);
@@ -60,7 +60,7 @@ public class TripDA {
     public List<Trip>  findAll() throws Exception {
         List<Trip> tripList = new ArrayList<>();
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "SELECT * FROM TRIP"
         );
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -79,11 +79,11 @@ public class TripDA {
     public List<Trip>  findById(int id) throws Exception {
         List<Trip> tripList = new ArrayList<>();
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "SELECT * FROM TRIP WHERE ID=?"
         );
-        ResultSet resultSet = preparedStatement.executeQuery();
         preparedStatement.setInt(1, id);
+        ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
             Trip trip = new Trip();
             trip.setId(resultSet.getInt("id"));
@@ -99,11 +99,11 @@ public class TripDA {
     public List<Trip>  findByDestination(String destination) throws Exception {
         List<Trip> tripList = new ArrayList<>();
         connect();
-        PreparedStatement preparedStatement = connection.prepareStatement(
+        preparedStatement = connection.prepareStatement(
                 "SELECT * FROM TRIP WHERE DESTINATION=?"
         );
-        ResultSet resultSet = preparedStatement.executeQuery();
         preparedStatement.setString(1, destination);
+        ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
             Trip trip = new Trip();
             trip.setId(resultSet.getInt("id"));
@@ -115,8 +115,6 @@ public class TripDA {
         disconnect();
         return tripList;
     }
-
-
 }
 
 
