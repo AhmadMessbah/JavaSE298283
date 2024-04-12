@@ -12,23 +12,13 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 
 public class Phone {
-    int id;
-    String firstName;
-    String lastName;
-    String brand;
-    String color;
-    String serial;
-    double price;
-
-    public Phone(int id, String firstName, String lastName, String brand, String color, String serial, double price) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.brand = brand;
-        this.color = color;
-        this.serial = serial;
-        this.price = price;
-    }
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String brand;
+    private String color;
+    private String serial;
+    private double price;
 
     @Override
     public String toString() {
