@@ -24,3 +24,4 @@ public class License {
         return gson.toJson(this);
     }
 }
+
