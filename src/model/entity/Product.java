@@ -9,9 +9,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 
-
 public class Product {
-
     private int id;
     private String name;
     private String brand;
