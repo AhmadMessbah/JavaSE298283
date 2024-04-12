@@ -34,6 +34,10 @@ public class LessonDA {
        preparedStatement.setTimestamp(5, Timestamp.valueOf(lesson.getStartDateTime()));
 
     }
+    public void edit(Lesson lesson)throws Exception{
+        preparedStatement = connection.prepareStatement("UPDATE LESSON SET ... WHERE ID=?");
+    }
+
     public boolean findById(String inPersonCode)throws Exception{
         connect();
         preparedStatement = connection.prepareStatement(
