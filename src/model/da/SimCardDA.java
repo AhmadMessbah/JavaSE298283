@@ -23,7 +23,6 @@ public class SimCardDA {
     }
 
 
-
     public void save(SimCard simcard) throws Exception {
         connect();
         PreparedStatement preparedStatement = connection.prepareStatement(
@@ -52,3 +51,4 @@ public class SimCardDA {
         preparedStatement.close();
         connection.close();
     }
+}
