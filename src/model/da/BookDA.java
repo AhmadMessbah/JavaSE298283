@@ -104,13 +104,14 @@ public int findByName(String name)throws Exception{
                 "select * from BOOK where ID=?"
         );
         statement.setInt(1,id);
-        ResultSet resultSet = statement.executeQuery();
-            Book book = new Book();
+        ResultSet resultSet=statement.executeQuery();
+        Book book = new Book();
+        if (resultSet.next()) {
             book.setId(resultSet.getInt("id"));
             book.setName(resultSet.getString("name"));
             book.setAuthor(resultSet.getString("author"));
             book.setIsbn(resultSet.getString("isbn"));
-
+        }
         disconnect();
         return book;
     }
