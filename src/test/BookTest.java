@@ -39,8 +39,13 @@ public class BookTest {
 //        //test passed
 //        System.out.println(bookDA.findById(6));
 
-        BookDA bookDA = new BookDA();
+//        BookDA bookDA = new BookDA();
+//          //test passed
+//        System.out.println(bookDA.findByAuthor("pishi"));
 
-        System.out.println(bookDA.findByAuthor("pishi"));
+        BookDA bookDA = new BookDA();
+        //test passed
+        System.out.println(bookDA.findByISBN("4565941"));
+
     }
 }

@@ -6,15 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
+import java.sql.Timestamp;
+
 @NoArgsConstructor
 @Getter
 @Setter
 @SuperBuilder
-public class Book {
+public class Borrow {
     private int id;
-    private String name;
-    private String author;
-    private String isbn;
+    private int Person_id;
+    private int Book_id;
+    private Timestamp Borrow_date;
+    private Timestamp Return_date;
+
 
     @Override
     public String toString() {

@@ -134,6 +134,19 @@ public int findByName(String name)throws Exception{
         disconnect();
         return bookList;
     }
+    public boolean findByISBN(String isbn)throws Exception{
+        connect();
+        statement = connection.prepareStatement(
+                "select * from BOOK where ISBN=?"
+        );
+        statement.setString(1,isbn);
+        ResultSet resultSet=statement.executeQuery();
+        Book book = new Book();
+        boolean result= resultSet.next();
+
+        disconnect();
+        return result;
+    }
 
 }
 
