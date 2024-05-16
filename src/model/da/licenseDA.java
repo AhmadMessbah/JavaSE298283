@@ -1,6 +1,5 @@
 package model.da;
 import model.entity.License;
-import model.entity.Person;
 import java.sql.*;
 
 public class licenseDA {
@@ -23,7 +22,7 @@ public class licenseDA {
     public void save(License license) throws Exception {
         connect();
         preparedStatement = connection.prepareStatement(
-                "INSERT INTO LICENSE(ID,LICENSE_TYPE,FILE_NAME,FILE_SIZE, DESCRIPTION) VALUES (LICENSE_SEQ.NEXTVAL, ?,?,?,?)"
+                "INSERT INTO LICENSE(ID,LICENSE_TYPE,FILE_NAME,FILE_SIZE, DESCRIPTION) VALUES (LICENSE_SEQ.NEXTVAL, ?,?,?,?)create table LICENSE(ID int, LICENSE_TYPE string, FILE_NAME string, FILE_SIZE int, DESCRIPTION string,)/"
         );
         preparedStatement.setString(1, license.getLicenseType());
         preparedStatement.setString(2, license.getFileName());
